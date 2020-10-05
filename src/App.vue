@@ -24,6 +24,7 @@ export default {
   },
   data() {
     return {
+      // data format is nested objects with properties: folderName and subFolders
       data: [
         {
           folderName: 'Folder1',
@@ -72,7 +73,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: midnightblue;
+  margin: 60px;
+}
+
+* {
+  box-sizing: inherit;
 }
 </style>
