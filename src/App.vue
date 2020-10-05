@@ -1,17 +1,67 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Tree Folder Structure</h1>
+    <div
+      v-for="(folder, index) in data"
+      :key="index"
+    >
+      <FolderItem
+        :folderName="folder.folderName"
+        :subFolders="folder.subFolders"
+        :level="0"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import FolderItem from './components/FolderItem.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    FolderItem,
+  },
+  data() {
+    return {
+      data: [
+        {
+          folderName: 'Folder1',
+          subFolders: [
+            {
+              folderName: 'Folder2',
+              subFolders: [],
+            },
+            {
+              folderName: 'Folder3',
+              subFolders: [
+                {
+                  folderName: 'Folder4',
+                  subFolders: [],
+                },
+              ],
+            },
+            {
+              folderName: 'Folder5',
+              subFolders: [],
+            },
+          ],
+        },
+        {
+          folderName: 'Folder6',
+          subFolders: [],
+        },
+        {
+          folderName: 'Folder7',
+          subFolders: [
+            {
+              folderName: 'Folder8',
+              subFolders: [],
+            },
+          ],
+        },
+      ],
+    };
   },
 };
 </script>
