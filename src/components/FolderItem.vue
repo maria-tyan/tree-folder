@@ -93,6 +93,7 @@ export default {
     background-color: transparent;
     color: midnightblue;
     width: 40px;
+    min-width: 40px;
     height: 40px;
     padding: 0;
     margin: 0 10px;
