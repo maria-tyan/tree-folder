@@ -10,17 +10,13 @@
       </form>
     </div>
 
-    <div
+    <FolderItem
       v-for="(subFolders, index) in subFolders"
       :key="index"
-    >
-      <FolderItem
-        :subFolders="subFolders.subFolders"
-        :folderName="subFolders.folderName"
-        :level="level + 1"
-      />
-
-    </div>
+      :subFolders="subFolders.subFolders"
+      :folderName="subFolders.folderName"
+      :level="level + 1"
+    />
   </div>
 </template>
 
